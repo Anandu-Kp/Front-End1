@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
 html * {
 
 
@@ -28,6 +34,7 @@ body {
     align-items: center;
     gap: 5px;
     color: #B1A592;
+
 }
 
 .right-nav {
@@ -45,7 +52,7 @@ body {
     justify-content: center;
     align-items: center;
     color: #B1A592;
-
+    text-decoration: none;
 }
 
 .left-nav span {
@@ -69,7 +76,13 @@ body {
     justify-content: center;
     align-items: center;
     color: #B1A592;
+    text-decoration: none;
+}
 
+.left-nav a:hover,
+.right-nav a:hover {
+    background-color: #B1A592;
+    color: #333333;
 }
 
 
@@ -94,10 +107,13 @@ body {
     justify-content: space-between;
     background: #DFD6C5;
     border-radius: 30px;
+    overflow: hidden;
 }
 
 .card1 img {
     height: 600px;
+    transition: transform .2s;
+    overflow: hidden;
 }
 
 
@@ -325,4 +341,42 @@ body {
 .card4 p {
     font-size: 14px;
     padding-bottom: 0;
+}
+
+.card3-para>h2 {
+    display: inline-block;
+    position: relative;
+}
+
+.card3-para>h2::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+    width: 0%;
+    height: 5px;
+    background-color: #333333;
+    transition: width 1s ease-out;
+}
+
+.card3:hover:hover>h2::before {
+    width: 80%;
+}
+
+
+
+.card1:hover img {
+    transform: scale(1.05);
+}
+
+.card2-:hover .card2-container>img {
+    transform: scale(1.05);
+}
+
+.card3:hover img {
+    transform: scale(1.05);
+}
+
+.card1:hover img {
+    transform: scale(1.05);
 }
